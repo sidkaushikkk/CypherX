@@ -31,6 +31,10 @@ const keywords = [
 
 const suspiciousExtensions = ['.ru', '.tk', '.ml', '.xyz', '.click'];
 
+app.get("/", (req, res) => {
+    res.send("CypherX backend is running 🚀");
+});
+
 app.post('/api/scan-url', async (req, res) => {
         let { url, source = 'manual' } = req.body;
     
