@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/scan-url';
+const API_URL = '/api/scan-url';
 const FILE_API_URL = 'http://localhost:3000/api/scan-file';
 
 // Simple state management for history (usually would be backend DB)
