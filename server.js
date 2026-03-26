@@ -9,6 +9,16 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
+const path = require("path");
+
+// serve frontend files
+app.use(express.static(path.join(__dirname)));
+
+// homepage route
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
+
 const axios = require("axios");
 
 const GOOGLE_API_KEY = "AIzaSyASQ2eMvbH5BF9AuMPPQT4qCm-NuZnSdY4";
